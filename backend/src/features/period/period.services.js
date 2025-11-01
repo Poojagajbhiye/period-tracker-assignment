@@ -1,4 +1,4 @@
-import Period from './period.model';
+import Period from './period.model.js';
 
 export const createPeriod = async (data) => {
   try {

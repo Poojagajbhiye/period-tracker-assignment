@@ -1,5 +1,5 @@
 import express from 'express';
-import { logPeriod } from './period.controller';
+import { logPeriod } from './period.controller.js';
 
 const router = express.Router();
 

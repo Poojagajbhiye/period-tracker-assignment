@@ -1,5 +1,5 @@
-import * as periodService from './period.services';
-import logger from '../../utils/logger';
+import * as periodService from './period.services.js';
+import logger from '../../utils/logger.js';
 
 export const logPeriod = async (req, res) => {
   try {
