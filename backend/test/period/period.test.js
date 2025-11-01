@@ -34,7 +34,7 @@ describe('POST /api/periods/log', () => {
       .expect(201);
 
     expect(res.body).toHaveProperty('_id');
-    expect(res.body.startDate).toBe(periodData.startDate);
+    expect(res.body.startDate.split('T')[0]).toBe(periodData.startDate);
 
     const periodInDb = await Period.findById(res.body._id);
     expect(periodInDb).not.toBeNull();
