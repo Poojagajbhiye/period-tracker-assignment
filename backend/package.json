@@ -10,7 +10,7 @@
     "start:dev": "NODE_ENV=development node src/server.js",
     "start:stage": "NODE_ENV=staging node src/server.js",
     "start:prod": "NODE_ENV=production node src/server.js",
-    "test": "NODE_ENV=test jest --runInBand"
+    "test": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand"
   },
   "dependencies": {
     "dotenv": "^17.2.3",

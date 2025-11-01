@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 import request from 'supertest';
 import { MongoMemoryServer } from 'mongodb-memory-server';
-import app from '../../../server.js';
-import Period from '../models/period.model.js';
+import app from '../../src/server.js';
+import Period from '../../src/features/period/period.model.js';
 
 let mongoServer;
 
