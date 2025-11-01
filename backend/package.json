@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Pooja Gajbhiye",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start:dev": "NODE_ENV=development node src/server.js",
+    "start:stage": "NODE_ENV=staging node src/server.js",
+    "start:prod": "NODE_ENV=production node src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.2",
+    "winston": "^3.18.3"
+  }
+}
