@@ -9,12 +9,18 @@
   "scripts": {
     "start:dev": "NODE_ENV=development node src/server.js",
     "start:stage": "NODE_ENV=staging node src/server.js",
-    "start:prod": "NODE_ENV=production node src/server.js"
+    "start:prod": "NODE_ENV=production node src/server.js",
+    "test": "NODE_ENV=test jest --runInBand"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "mongoose": "^8.19.2",
     "winston": "^3.18.3"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^10.3.0",
+    "supertest": "^7.1.4"
   }
 }
