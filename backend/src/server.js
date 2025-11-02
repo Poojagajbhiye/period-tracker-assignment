@@ -4,6 +4,7 @@ import connectDB from './config/db.js';
 import logger from './utils/logger.js';
 import { ENV } from './config/env.js';
 import periodRoutes from '../src/features/period/period.routes.js';
+import cors from 'cors';
 
 const env = process.env.NODE_ENV || ENV.DEVELOPMENT;
 
@@ -17,6 +18,11 @@ if (env === ENV.PRODUCTION) {
 dotenv.config({ path: envFile });
 
 const app = express();
+app.use(cors({
+  origin: 'http://localhost:4200',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 if (process.env.NODE_ENV !== 'test') {
