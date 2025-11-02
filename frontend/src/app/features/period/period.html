@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Log Your Period</h2>
+    <form (ngSubmit)="onSubmit()">
+        <label>Start Date:</label>
+        <input type="date" [(ngModel)]="startDate" name="startDate" required>
+
+        <label>Cycle Length (days):</label>
+        <input type="number" [(ngModel)]="cycleLength" name="cycleLength" required>
+
+        <button type="submit">Log</button>
+    </form>
+    <p *ngIf="message">
+        {{ message }}
+    </p>
+</div>
